@@ -19,7 +19,6 @@ public class WorkConsumerServiceAutoOne {
         Channel channel = mqConnection.createChannel();
         channel.basicQos(1);  //设置每次消费一个
         channel.queueDeclare("work",true,false,false,null);
-
         //修改参数二，设置成false为不自动确认消息机制
         channel.basicConsume("work",false,new DefaultConsumer(channel){
             @Override

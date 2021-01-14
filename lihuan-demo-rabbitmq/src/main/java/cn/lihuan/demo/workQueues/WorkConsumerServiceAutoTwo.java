@@ -18,9 +18,7 @@ public class WorkConsumerServiceAutoTwo {
         Connection mqConnection = MqUtils.getMqConnection();
         Channel channel = mqConnection.createChannel();
         channel.basicQos(1);  //设置每次消费一个
-
         channel.queueDeclare("work",true,false,false,null);
-
         channel.basicConsume("work",false,new DefaultConsumer(channel){
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
