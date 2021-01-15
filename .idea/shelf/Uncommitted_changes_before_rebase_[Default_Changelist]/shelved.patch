@@ -1,0 +1,392 @@
+Index: lihuan-demo-zhengze/src/main/java/cn/lihuan/com/utils/IDUtils.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lihuan-demo-zhengze/src/main/java/cn/lihuan/com/utils/IDUtils.java	(date 1610433888866)
++++ lihuan-demo-zhengze/src/main/java/cn/lihuan/com/utils/IDUtils.java	(date 1610433888866)
+@@ -0,0 +1,74 @@
++package cn.lihuan.com.utils;
++
++// 原文：https://blog.csdn.net/u011106915/article/details/76066985
++public class IDUtils {
++    public static void main(String[] args) {
++        isIDNumber("14022719980202231x");
++    }
++
++
++    public static boolean isIDNumber(String IDNumber) {
++        if (IDNumber == null || "".equals(IDNumber)) {
++            return false;
++        }
++        // 定义判别用户身份证号的正则表达式（15位或者18位，最后一位可以为字母）
++        String regularExpression = "(^[1-9]\\d{5}(18|19|20)\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$)|" +
++                "(^[1-9]\\d{5}\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}$)";
++        //假设18位身份证号码:41000119910101123X  410001 19910101 123X
++        //^开头
++        //[1-9] 第一位1-9中的一个      4
++        //\\d{5} 五位数字           10001（前六位省市县地区）
++        //(18|19|20)                19（现阶段可能取值范围18xx-20xx年）
++        //\\d{2}                    91（年份）
++        //((0[1-9])|(10|11|12))     01（月份）
++        //(([0-2][1-9])|10|20|30|31)01（日期）
++        //\\d{3} 三位数字            123（第十七位奇数代表男，偶数代表女）
++        //[0-9Xx] 0123456789Xx其中的一个 X（第十八位为校验值）
++        //$结尾
++
++        //假设15位身份证号码:410001910101123  410001 910101 123
++        //^开头
++        //[1-9] 第一位1-9中的一个      4
++        //\\d{5} 五位数字           10001（前六位省市县地区）
++        //\\d{2}                    91（年份）
++        //((0[1-9])|(10|11|12))     01（月份）
++        //(([0-2][1-9])|10|20|30|31)01（日期）
++        //\\d{3} 三位数字            123（第十五位奇数代表男，偶数代表女），15位身份证不含X
++        //$结尾
++
++
++        boolean matches = IDNumber.matches(regularExpression);
++        //判断第18位校验值
++        if (matches) {
++            if (IDNumber.length() == 18) {
++                try {
++                    char[] charArray = IDNumber.toCharArray();
++                    //前十七位加权因子
++                    int[] idCardWi = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
++                    //这是除以11后，可能产生的11位余数对应的验证码
++                    String[] idCardY = {"1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"};
++                    int sum = 0;
++                    for (int i = 0; i < idCardWi.length; i++) {
++                        int current = Integer.parseInt(String.valueOf(charArray[i]));
++                        int count = current * idCardWi[i];
++                        sum += count;
++                    }
++                    char idCardLast = charArray[17];
++                    int idCardMod = sum % 11;
++                    if (idCardY[idCardMod].toUpperCase().equals(String.valueOf(idCardLast).toUpperCase())) {
++
++                        return true;
++                    } else {
++                        return false;
++                    }
++
++                } catch (Exception e) {
++                    e.printStackTrace();
++                    return false;
++                }
++            }
++
++        }
++        return matches;
++    }
++}
+Index: lihuan-demo-zhengze/src/main/java/cn/lihuan/com/ZhengZeDemo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package cn.lihuan.com;\r\n\r\nimport java.io.*;\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.regex.Matcher;\r\nimport java.util.regex.Pattern;\r\n\r\n/**\r\n * Created with IntelliJ IDEA.\r\n *\r\n * @Auther: 李欢\r\n * @Date: 2021/01/07/13:55\r\n * @Description:\r\n */\r\npublic class ZhengZeDemo {\r\n\r\n    /**\r\n     * 正则表达式读取文件指定内容\r\n     */\r\n    /**\r\n     * 获取日志文件中的时间\r\n     * @throws FileNotFoundException\r\n     */\r\n    public static void main(String[]args) throws FileNotFoundException {\r\n        {\r\n            //匹配次数\r\n            int matchTime = 0;\r\n            //存匹配上的字符串\r\n            List<String> strs = new ArrayList<>();\r\n            try\r\n            {\r\n                //编码格式\r\n                String encoding = \"UTF-8\";\r\n                //文件路径\r\n//                File file = new File(\"C:\\\\Users\\\\Dell\\\\Desktop\\\\aaa.txt\");\r\n                File file = new File(\"C:\\\\Users\\\\Dell\\\\Desktop\\\\招标内容.txt\");\r\n                if (file.isFile() && file.exists()){ // 判断文件是否存在\r\n                    //输入流\r\n                    InputStreamReader read = new InputStreamReader(\r\n                            new FileInputStream(file), encoding);// 考虑到编码格\r\n                    BufferedReader bufferedReader = new BufferedReader(read);\r\n                    String lineTxt = null;\r\n                    //读取一行\r\n                    while ((lineTxt = bufferedReader.readLine()) != null)\r\n                    {\r\n                        //正则表达式\r\n                        matchTime = getMatchTime(matchTime, strs, lineTxt);\r\n                    }\r\n                    read.close();\r\n                }\r\n                else\r\n                {\r\n                    System.out.println(\"找不到指定的文件\");\r\n                }\r\n            }\r\n            catch (Exception e)\r\n            {\r\n                System.out.println(\"读取文件内容出错\");\r\n                e.printStackTrace();\r\n            }\r\n            List<Integer> nums = getSum(strs);\r\n            double avg = getAvgTime(nums,matchTime);\r\n            System.out.print(avg);\r\n        }\r\n    }\r\n\r\n    private static int getMatchTime(int matchTime, List<String> strs, String lineTxt) {\r\n//        Pattern p = Pattern.compile(\"[0-9]*ms$\");\r\n//        Pattern p = Pattern.compile(\"合同编号\");\r\n//        Pattern p = Pattern.compile(\"(?<=合同编号.\\\\s)\\\\d*\");\r\n        Pattern p = Pattern.compile(\"(?<=劳务分包人.\\\\s)\\\\S*\");\r\n//        Pattern p = Pattern.compile(\"(\\\\S*)施工$\");\r\n        Matcher m = p.matcher(lineTxt);\r\n        boolean result = m.find();\r\n        String find_result = null;\r\n        if (result)\r\n        {\r\n            matchTime++;\r\n            find_result = m.group(0);\r\n            strs.add(find_result);\r\n        }\r\n        return matchTime;\r\n    }\r\n\r\n    private static List<Integer> getSum(List<String> strs) {\r\n        List<Integer> nums = new ArrayList<>();\r\n        for(String str : strs){\r\n            String s = str.replace(\"ms\",\"\");\r\n            Integer a = Integer.valueOf(s);\r\n            nums.add(a);\r\n        }\r\n        return nums;\r\n    }\r\n\r\n    private static double getAvgTime(List<Integer> nums, int matchTime) {\r\n        double sum = 0;\r\n        double avg ;\r\n        for(Integer num : nums){\r\n            sum+=num;\r\n        }\r\n        avg = sum/matchTime;\r\n        return avg;\r\n    }\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lihuan-demo-zhengze/src/main/java/cn/lihuan/com/ZhengZeDemo.java	(revision ce87682df4e8e6e20d6397d710456cdad5ef71dd)
++++ lihuan-demo-zhengze/src/main/java/cn/lihuan/com/ZhengZeDemo.java	(date 1610444273457)
+@@ -1,5 +1,8 @@
+ package cn.lihuan.com;
+ 
++import cn.lihuan.com.enums.RegExpEnum;
++import org.junit.Test;
++
+ import java.io.*;
+ import java.util.ArrayList;
+ import java.util.List;
+@@ -20,62 +23,60 @@
+      */
+     /**
+      * 获取日志文件中的时间
++     *
+      * @throws FileNotFoundException
+      */
+-    public static void main(String[]args) throws FileNotFoundException {
++    public static void main(String[] args) throws FileNotFoundException {
+         {
+             //匹配次数
+             int matchTime = 0;
+             //存匹配上的字符串
+             List<String> strs = new ArrayList<>();
+-            try
+-            {
++            try {
+                 //编码格式
+                 String encoding = "UTF-8";
+                 //文件路径
+ //                File file = new File("C:\\Users\\Dell\\Desktop\\aaa.txt");
+                 File file = new File("C:\\Users\\Dell\\Desktop\\招标内容.txt");
+-                if (file.isFile() && file.exists()){ // 判断文件是否存在
++                if (file.isFile() && file.exists()) { // 判断文件是否存在
+                     //输入流
+                     InputStreamReader read = new InputStreamReader(
+                             new FileInputStream(file), encoding);// 考虑到编码格
+                     BufferedReader bufferedReader = new BufferedReader(read);
+                     String lineTxt = null;
+                     //读取一行
+-                    while ((lineTxt = bufferedReader.readLine()) != null)
+-                    {
++                    while ((lineTxt = bufferedReader.readLine()) != null) {
+                         //正则表达式
+                         matchTime = getMatchTime(matchTime, strs, lineTxt);
+                     }
+                     read.close();
+-                }
+-                else
+-                {
++                } else {
+                     System.out.println("找不到指定的文件");
+                 }
+-            }
+-            catch (Exception e)
+-            {
++            } catch (Exception e) {
+                 System.out.println("读取文件内容出错");
+                 e.printStackTrace();
+             }
+             List<Integer> nums = getSum(strs);
+-            double avg = getAvgTime(nums,matchTime);
++            double avg = getAvgTime(nums, matchTime);
+             System.out.print(avg);
+         }
+     }
+ 
+     private static int getMatchTime(int matchTime, List<String> strs, String lineTxt) {
+-//        Pattern p = Pattern.compile("[0-9]*ms$");
++        String regularExpression = "(^[1-9]\\d{5}(18|19|20)\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$)|" +
++                "(^[1-9]\\d{5}\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}$)";
++        //        Pattern p = Pattern.compile("[0-9]*ms$");
+ //        Pattern p = Pattern.compile("合同编号");
+ //        Pattern p = Pattern.compile("(?<=合同编号.\\s)\\d*");
+-        Pattern p = Pattern.compile("(?<=劳务分包人.\\s)\\S*");
++//        Pattern p = Pattern.compile("(?<=劳务分包人.\\s)\\S*");
+ //        Pattern p = Pattern.compile("(\\S*)施工$");
++        Pattern p = Pattern.compile(regularExpression);
++
+         Matcher m = p.matcher(lineTxt);
+         boolean result = m.find();
+         String find_result = null;
+-        if (result)
+-        {
++        if (result) {
+             matchTime++;
+             find_result = m.group(0);
+             strs.add(find_result);
+@@ -85,8 +86,8 @@
+ 
+     private static List<Integer> getSum(List<String> strs) {
+         List<Integer> nums = new ArrayList<>();
+-        for(String str : strs){
+-            String s = str.replace("ms","");
++        for (String str : strs) {
++            String s = str.replace("ms", "");
+             Integer a = Integer.valueOf(s);
+             nums.add(a);
+         }
+@@ -95,13 +96,63 @@
+ 
+     private static double getAvgTime(List<Integer> nums, int matchTime) {
+         double sum = 0;
+-        double avg ;
+-        for(Integer num : nums){
+-            sum+=num;
++        double avg;
++        for (Integer num : nums) {
++            sum += num;
+         }
+-        avg = sum/matchTime;
++        avg = sum / matchTime;
+         return avg;
+     }
+ 
++    @Test
++    public void testShenfenzheng() {
++        String regularExpression = "(^[1-9]\\d{5}(18|19|20)\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$)|" +
++                "(^[1-9]\\d{5}\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}$)";
++        //假设18位身份证号码:41000119910101123X  4 10001 19 91 01 01 123X
++        //^开头
++        //[1-9] 第一位1-9中的一个      4
++        //\\d{5} 五位数字           10001（前六位省市县地区）
++        //(18|19|20)                19（现阶段可能取值范围18xx-20xx年）
++        //\\d{2}                    91（年份）
++        //((0[1-9])|(10|11|12))     01（月份）
++        //(([0-2][1-9])|10|20|30|31)01（日期）
++        //\\d{3} 三位数字            123（第十七位奇数代表男，偶数代表女）
++        //[0-9Xx] 0123456789Xx其中的一个 X（第十八位为校验值）
++        //$结尾
++
++        //假设15位身份证号码:410001910101123  410001 910101 123
++        //^开头
++        //[1-9] 第一位1-9中的一个      4
++        //\\d{5} 五位数字           10001（前六位省市县地区）
++        //\\d{2}                    91（年份）
++        //((0[1-9])|(10|11|12))     01（月份）
++        //(([0-2][1-9])|10|20|30|31)01（日期）
++        //\\d{3} 三位数字            123（第十五位奇数代表男，偶数代表女），15位身份证不含X
++        String lineTxt = "14022719980202231X";
++        Pattern p = Pattern.compile(regularExpression);
++        Matcher m = p.matcher(lineTxt);
++        boolean result = m.find();
++        String find_result = null;
++        find_result = m.group(0);
++
++        System.out.println("find_result = " + find_result);
++    }
++    @Test
++    public void test2(){
++
++
++//        String lineTxt = "6217855000052295094";
++//
++//
++//        Pattern p = Pattern.compile(RegExpEnum.BANK_CARD_RegExp.getValue());
++//        Matcher m = p.matcher(lineTxt);
++//        boolean result = m.find();
++//        String find_result = null;
++//        find_result = m.group(0);
++
++//        System.out.println("find_result = " + find_result);
++    }
++
++
+ 
+ }
+Index: lihuan-demo-zhengze/src/main/java/cn/lihuan/com/enums/RegExpEnum.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lihuan-demo-zhengze/src/main/java/cn/lihuan/com/enums/RegExpEnum.java	(date 1610443540044)
++++ lihuan-demo-zhengze/src/main/java/cn/lihuan/com/enums/RegExpEnum.java	(date 1610443540044)
+@@ -0,0 +1,51 @@
++package cn.lihuan.com.enums;
++
++/**
++ * @Auther: 李欢
++ * @Date: 2021/01/12/17:14
++ * @Description:
++ */
++public enum RegExpEnum {
++
++    //身份证号
++    IDENTITY_CARD_RegExp("身份证号","(^[1-9]\\\\d{5}(18|19|20)\\\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\\\d{3}[0-9Xx]$)|\" +\n" +
++            "                \"(^[1-9]\\\\d{5}\\\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\\\d{3}$)"),
++    //银行卡
++    BANK_CARD_RegExp("银行卡","^([1-9]{1})(\\d{14}|\\d{18})$");
++
++    private String name;
++    private String value;
++
++    RegExpEnum(String name, String value) {
++        this.name = name;
++        this.value = value;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public String getValue() {
++        return value;
++    }
++
++    public void setValue(String value) {
++        this.value = value;
++    }
++
++    public static RegExpEnum getByType(String name) {
++        if (name == null) {
++            return null;
++        }
++        for (RegExpEnum val : values()) {
++            if (val.getName().equals(name)) {
++                return val;
++            }
++        }
++        return null;
++    }
++}
+Index: lihuan-demo-zhengze/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n    <parent>\r\n        <artifactId>lihuan-demo</artifactId>\r\n        <groupId>cn.lihuan.com</groupId>\r\n        <version>1.0-SNAPSHOT</version>\r\n    </parent>\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <artifactId>lihuan-demo-zhengze</artifactId>\r\n\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lihuan-demo-zhengze/pom.xml	(revision ce87682df4e8e6e20d6397d710456cdad5ef71dd)
++++ lihuan-demo-zhengze/pom.xml	(date 1610434066276)
+@@ -11,5 +11,19 @@
+ 
+     <artifactId>lihuan-demo-zhengze</artifactId>
+ 
+-
++    <dependencies>
++        <!-- https://mvnrepository.com/artifact/junit/junit -->
++        <dependency>
++            <groupId>junit</groupId>
++            <artifactId>junit</artifactId>
++            <version>4.12</version>
++            <scope>test</scope>
++        </dependency>
++        <dependency>
++            <groupId>junit</groupId>
++            <artifactId>junit</artifactId>
++            <version>4.12</version>
++            <scope>compile</scope>
++        </dependency>
++    </dependencies>
+ </project>
+Index: lihuan-demo-zhengze/src/main/java/cn/lihuan/com/utils/ReadFiles.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- lihuan-demo-zhengze/src/main/java/cn/lihuan/com/utils/ReadFiles.java	(date 1610445775231)
++++ lihuan-demo-zhengze/src/main/java/cn/lihuan/com/utils/ReadFiles.java	(date 1610445775231)
+@@ -0,0 +1,38 @@
++package cn.lihuan.com.utils;
++
++import java.io.*;
++
++/**
++ * Created with IntelliJ IDEA.
++ *
++ * @Auther: 李欢
++ * @Date: 2021/01/12/17:51
++ * @Description:
++ */
++
++public class ReadFiles {
++    //文件地址
++    private static final String filePath = "C:\\Users\\Dell\\Desktop\\招标内容.txt";
++    //编码格式
++    private static final String encoding = "UTF-8";
++    public static void main(String[] args) throws Exception {
++        File file = new File(filePath);
++        if (file.isFile() && file.exists()) { // 判断文件是否存在
++            InputStreamReader read = new InputStreamReader(new FileInputStream(file), encoding);// 考虑到编码格
++            BufferedReader bufferedReader = new BufferedReader(read);
++            String lineTxt = null;
++            //读取一行
++            while ((lineTxt = bufferedReader.readLine()) != null) {
++                //正则表达式
++
++            }
++            read.close();
++        }
++    }
++    //匹配
++    private static void getMatchTime(String lineText){
++
++    }
++
++
++}

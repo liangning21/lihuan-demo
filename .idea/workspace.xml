@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77c65d92-bd68-444b-ae9f-ab01b923ecb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/RegExpEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/zhengze/EmailSpider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/zhengze/GetPhoneNum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/zhengze/TestRegex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/zhengze/Tester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/zhengze/Tests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/zhengze/time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lihuan-demo-rabbitmq/src/main/java/cn/lihuan/demo/deb/AAA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lihuan-demo-rabbitmq/src/main/java/cn/lihuan/demo/deb/BBB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lihuan-demo-zhengze/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/utils/RegExpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/lihuan-demo-zhengze/src/main/java/cn/lihuan/com/utils/RegExpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="测试 commit合并" />
+        <option name="rewordedMessage" value="测试 commit合并2&#10;测试 commit合并" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="2ef36d33b07be1c806d8c084fa0c3704a0936b59" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache-maven-3.5.4\repository-jeecgboot" />
+        <option name="mavenHome" value="D:\apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1n2WjGf0B0GS39pbpVBuwsNPdEW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/IdeaProjects/SpringBoot-master" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.42787525" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/lihuan-demo-rabbitmq/src/main/java/cn/lihuan/demo/test/bbb.java" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.lihuan.demo.routing.direct" />
+      <recent name="cn.lihuan.demo.fanout" />
+      <recent name="cn.lihuan.com" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.time">
+    <configuration name="DirectConsumerService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.lihuan.demo.routing.direct.DirectConsumerService" />
+      <module name="lihuan-demo-rabbitmq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.lihuan.demo.routing.direct.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectProducerService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.lihuan.demo.routing.direct.DirectProducerService" />
+      <module name="lihuan-demo-rabbitmq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.lihuan.demo.routing.direct.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailSpider" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.lihuan.com.zhengze.EmailSpider" />
+      <module name="lihuan-demo-zhengze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.lihuan.com.zhengze.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.lihuan.com.zhengze.Tester" />
+      <module name="lihuan-demo-zhengze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.lihuan.com.zhengze.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="time" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.lihuan.com.zhengze.time" />
+      <module name="lihuan-demo-zhengze" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.lihuan.com.zhengze.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.time" />
+        <item itemvalue="Application.EmailSpider" />
+        <item itemvalue="Application.Tester" />
+        <item itemvalue="Application.DirectProducerService" />
+        <item itemvalue="Application.DirectConsumerService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77c65d92-bd68-444b-ae9f-ab01b923ecb1" name="Default Changelist" comment="" />
+      <created>1610588799255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610588799255</updated>
+      <workItem from="1610588800434" duration="1089000" />
+      <workItem from="1610589919316" duration="13316000" />
+      <workItem from="1610609631514" duration="586000" />
+      <workItem from="1610611732151" duration="12000" />
+      <workItem from="1610611839171" duration="3496000" />
+      <workItem from="1610615691898" duration="3041000" />
+      <workItem from="1610673342907" duration="11014000" />
+    </task>
+    <task id="LOCAL-00001" summary="测试 commit提交">
+      <created>1610589421122</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610589421122</updated>
+    </task>
+    <task id="LOCAL-00002" summary="测试 commit提交2">
+      <created>1610589435475</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610589435475</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;测试 commit提交2&quot;&#10;&#10;This reverts commit 376fdd55">
+      <created>1610589536875</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610589536875</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Revert &quot;Revert &quot;测试 commit提交2&quot;&quot;&#10;&#10;This reverts commit a0f6c961">
+      <created>1610589592467</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610589592467</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1">
+      <created>1610589622299</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610589622299</updated>
+    </task>
+    <task id="LOCAL-00006" summary="分支的内容dev">
+      <created>1610590418180</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610590418180</updated>
+    </task>
+    <task id="LOCAL-00007" summary="分支内容dev 匹配手机号的正则">
+      <created>1610605697206</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610605697206</updated>
+    </task>
+    <task id="LOCAL-00008" summary="广播模式">
+      <created>1610619007668</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610619007669</updated>
+    </task>
+    <task id="LOCAL-00009" summary="交换机 基于路由的消费模式">
+      <created>1610675706358</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610675706358</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="测试 commit提交" />
+    <MESSAGE value="测试 commit提交2" />
+    <MESSAGE value="Revert &quot;测试 commit提交2&quot;&#10;&#10;This reverts commit 376fdd55" />
+    <MESSAGE value="Revert &quot;Revert &quot;测试 commit提交2&quot;&quot;&#10;&#10;This reverts commit a0f6c961" />
+    <MESSAGE value="1" />
+    <MESSAGE value="分支的内容dev" />
+    <MESSAGE value="分支内容dev 匹配手机号的正则" />
+    <MESSAGE value="广播模式" />
+    <MESSAGE value="交换机 基于路由的消费模式" />
+    <option name="LAST_COMMIT_MESSAGE" value="交换机 基于路由的消费模式" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="312" y="0" key="#Project_Structure" timestamp="1610676854395">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="312" y="0" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1610676854395" />
+    <state x="718" y="159" key="#com.intellij.ide.util.MemberChooser" timestamp="1610675096368">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="718" y="159" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610675096368" />
+    <state x="384" y="0" key="CommitChangelistDialog2" timestamp="1610675704983">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="384" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1610675704983" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1610591468476">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610591468476" />
+    <state x="687" y="216" key="FileChooserDialogImpl" timestamp="1610689633873">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="687" y="216" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610689633873" />
+    <state width="1867" height="341" key="GridCell.Tab.0.bottom" timestamp="1610694003646">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610694003646" />
+    <state width="1867" height="341" key="GridCell.Tab.0.center" timestamp="1610694003646">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="341" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610694003646" />
+    <state width="1867" height="341" key="GridCell.Tab.0.left" timestamp="1610694003645">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="341" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610694003645" />
+    <state width="1867" height="341" key="GridCell.Tab.0.right" timestamp="1610694003646">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="341" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610694003646" />
+    <state width="1867" height="244" key="GridCell.Tab.1.bottom" timestamp="1610691942083">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="244" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610691942083" />
+    <state width="1867" height="244" key="GridCell.Tab.1.center" timestamp="1610691942082">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="244" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610691942082" />
+    <state width="1867" height="244" key="GridCell.Tab.1.left" timestamp="1610691942082">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="244" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610691942082" />
+    <state width="1867" height="244" key="GridCell.Tab.1.right" timestamp="1610691942082">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1867" height="244" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610691942082" />
+    <state x="437" y="192" key="IDE.errors.dialog" timestamp="1610689925335">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="437" y="192" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610689925335" />
+    <state x="312" y="0" key="SettingsEditor" timestamp="1610675841307">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="312" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610675841307" />
+    <state x="614" y="198" width="675" height="655" key="StructurePopup" timestamp="1610673709691">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="614" y="198" width="675" height="655" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1610673709691" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1610591468476">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610591468476" />
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2" timestamp="1610675716839">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="188" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610675716839" />
+    <state x="672" y="190" key="VcsDiffUtil.ChangesDialog" timestamp="1610589517064">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="190" key="VcsDiffUtil.ChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610589517064" />
+    <state x="731" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610609983519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="731" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610609983519" />
+    <state x="624" y="229" key="extract.method.dialog" timestamp="1610677039190">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="229" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610677039190" />
+    <state x="532" y="237" key="run.anything.popup" timestamp="1610591728836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="532" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610591728836" />
+    <state x="348" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1610692059474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="348" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610692059474" />
+    <state x="749" y="260" key="svn.repositoryBrowser" timestamp="1610588694330">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="749" y="260" key="svn.repositoryBrowser/0.0.1920.1040@0.0.1920.1040" timestamp="1610588694330" />
+  </component>
+</project>

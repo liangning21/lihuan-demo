@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lihuan-demo.iml" filepath="$PROJECT_DIR$/lihuan-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lihuan-demo-rabbitmq/lihuan-demo-rabbitmq.iml" filepath="$PROJECT_DIR$/lihuan-demo-rabbitmq/lihuan-demo-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lihuan-demo-zhengze/lihuan-demo-zhengze.iml" filepath="$PROJECT_DIR$/lihuan-demo-zhengze/lihuan-demo-zhengze.iml" />
+    </modules>
+  </component>
+</project>

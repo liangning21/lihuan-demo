@@ -9,6 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <commons.version>2.6</commons.version>
+    </properties>
 
 
     <modules>
@@ -17,4 +20,16 @@
     </modules>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons.version}</version>
+        </dependency>
+    </dependencies>
 </project>
