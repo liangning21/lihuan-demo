@@ -1,4 +1,4 @@
-package cn.lihuan.com;
+package cn.lihuan.com.utils;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -23,7 +23,15 @@ public enum RegExpEnum {
     DATA_RegExp("日期","\\d{4}(\\-|\\/|.)\\d{1,2}\\1\\d{1,2}"),
 
     //邮箱
-    EMIAL_RegExp("邮箱","[\\w]+@[\\w]+\\.[com|bainet|cn]*");
+    EMIAL_RegExp("邮箱","[\\w]+@[\\w]+\\.[com|bainet|cn]*"),
+
+    //营业执照 统一社会信用代码（18位）
+    SOCIAL_CREDIT_RegExp("统一社会信用","^([159Y]{1})([1239]{1})([0-9ABCDEFGHJKLMNPQRTUWXY]{6})([0-9ABCDEFGHJKLMNPQRTUWXY]{9})([0-90-9ABCDEFGHJKLMNPQRTUWXY])$"),
+
+    //组织机构代码
+    ORGANIZING_CODE_RegExp("组织机构","[0-9A-HJ-NPQRTUWXY]{8}-[0-9A-HJ-NPQRTUWXY]"),
+    //金额
+    MONEY_RegExp("金额","^(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d){0,2})?$");
 
     private String name;
     private String value;
@@ -48,6 +56,7 @@ public enum RegExpEnum {
     public void setValue(String value) {
         this.value = value;
     }
+
     public static RegExpEnum getEnum(String name) {
         if (StringUtils.isBlank(name)) {
             return null;

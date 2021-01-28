@@ -1,7 +1,5 @@
 package cn.lihuan.com.utils;
 
-import cn.lihuan.com.RegExpEnum;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -55,7 +53,6 @@ public class RegExpUtils {
         }
         return stringBuilder.toString();
     }
-
     //匹配身份证
     public static String demo4(String result) {
         StringBuilder stringBuilder = new StringBuilder();
@@ -86,4 +83,31 @@ public class RegExpUtils {
         }
         return stringBuilder.toString();
     }
+    //营业执照 统一社会信用代码（18位）
+    public static void isLicense18(String license) {
+//        String regex = "^([159Y]{1})([1239]{1})([0-9ABCDEFGHJKLMNPQRTUWXY]{6})([0-9ABCDEFGHJKLMNPQRTUWXY]{9})([0-90-9ABCDEFGHJKLMNPQRTUWXY])$";
+        Pattern p=Pattern.compile(RegExpEnum.SOCIAL_CREDIT_RegExp.getValue());
+        Matcher matcher = p.matcher(license);
+        if(matcher.find()){
+            System.out.println("matcher.group() = " + matcher.group());
+        }
+    }
+    //匹配组织机构信用代码
+    public static void acd(String result){
+//        String regex = "[0-9A-HJ-NPQRTUWXY]{8}-[0-9A-HJ-NPQRTUWXY]";
+        Pattern p=Pattern.compile(RegExpEnum.ORGANIZING_CODE_RegExp.getValue());
+        Matcher matcher = p.matcher(result);
+        if(matcher.find()){
+            System.out.println("matcher.group() = " + matcher.group());
+        }
+    }
+    //金额验证
+    public static void isNumber(String result){
+        Pattern pattern= Pattern.compile("^(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d){0,2})?$"); // 判断小数点后2位的数字的正则表达式
+        Matcher match=pattern.matcher(result);
+        if(match.find()){
+            System.out.println("match.group() = " + match.group());
+        }
+    }
+
 }

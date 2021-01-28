@@ -1,6 +1,6 @@
 package cn.lihuan.com.zhengze;
 
-import cn.lihuan.com.RegExpEnum;
+import cn.lihuan.com.utils.RegExpEnum;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
