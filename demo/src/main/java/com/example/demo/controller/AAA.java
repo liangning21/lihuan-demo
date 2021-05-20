@@ -23,7 +23,7 @@ public class AAA {
                       String jsonObject, String appid) throws IOException {
 
         if (file.isEmpty()) {
-            System.out.println("为空");
+            System.out.println("为空54+65645");
         }
         InputStream inputStream = file.getInputStream();
         byte[] b = new byte[1024 * 10];
